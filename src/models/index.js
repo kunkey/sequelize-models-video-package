@@ -5,6 +5,7 @@ class Database {
         this.Connection = Connection;
         global["Sequelize"] = Sequelize;
         this.models = {}; // Nơi lưu trữ các models đã khởi tạo
+        global["SeqModels"] = this.models;
     }
 
     // Khởi tạo tất cả các models

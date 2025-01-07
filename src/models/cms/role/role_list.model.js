@@ -12,7 +12,7 @@ class CmsRoleListModel extends Model {
             return {
                 include: [
                     {
-                        model: CmsRolePermissionModel,
+                        model: SeqModels.CmsRolePermissionModel,
                         as: "role_permission",
                         attributes: [
                             "id",

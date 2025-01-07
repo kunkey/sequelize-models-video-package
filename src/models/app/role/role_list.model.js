@@ -7,23 +7,23 @@ class AppRoleListModel extends Model {
     static TABLE_NAME = "App_Role_List";
 
     static scopes = {
-        // withPermissionAllow() {
-        //     return {
-        //         include: [
-        //             {
-        //                 model: AppRolePermissionModel,
-        //                 as: "role_permission",
-        //                 attributes: [
-        //                     "id",
-        //                     "permission_name",
-        //                     "permissions_allow",
-        //                     "createdAt",
-        //                     "updatedAt",
-        //                 ]
-        //             },
-        //         ],
-        //     };
-        // },
+        withPermissionAllow() {
+            return {
+                include: [
+                    {
+                        model: SeqModels.AppRolePermissionModel,
+                        as: "role_permission",
+                        attributes: [
+                            "id",
+                            "permission_name",
+                            "permissions_allow",
+                            "createdAt",
+                            "updatedAt",
+                        ]
+                    },
+                ],
+            };
+        },
     };
 
     static Entity = {

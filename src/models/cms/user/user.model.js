@@ -22,7 +22,7 @@ class CmsUserModel extends Model {
       return {
         include: [
           {
-            model: CmsRoleListModel,
+            model: SeqModels.CmsRoleListModel,
             as: "cms_role",
             attributes: [
               "id",
@@ -32,7 +32,7 @@ class CmsUserModel extends Model {
             ],
             include: [
               {
-                model: CmsRolePermissionModel,
+                model: SeqModels.CmsRolePermissionModel,
                 as: "role_permission",
                 attributes: ["id", "permission_name", "permissions_allow"],
               },

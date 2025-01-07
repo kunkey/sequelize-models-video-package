@@ -18,31 +18,31 @@ class AppUserModel extends Model {
     FALSE: false,
   };
 
-  // static scopes = {
-  //   withRole() {
-  //     return {
-  //       include: [
-  //         {
-  //           model: AppRoleListModel,
-  //           as: "user_role",
-  //           attributes: [
-  //             "id",
-  //             "role_name",
-  //             "role_permisstions_id",
-  //             "is_default",
-  //           ],
-  //           include: [
-  //             {
-  //               model: AppRolePermissionModel,
-  //               as: "role_permission",
-  //               attributes: ["id", "permission_name", "permissions_allow"],
-  //             },
-  //           ],
-  //         },
-  //       ],
-  //     };
-  //   },
-  // };
+  static scopes = {
+    withRole() {
+      return {
+        include: [
+          {
+            model: SeqModels.AppRoleListModel,
+            as: "user_role",
+            attributes: [
+              "id",
+              "role_name",
+              "role_permisstions_id",
+              "is_default",
+            ],
+            include: [
+              {
+                model: SeqModels.AppRolePermissionModel,
+                as: "role_permission",
+                attributes: ["id", "permission_name", "permissions_allow"],
+              },
+            ],
+          },
+        ],
+      };
+    },
+  };
 
   static Entity = {
     id: {
