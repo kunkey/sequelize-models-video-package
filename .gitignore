@@ -1,0 +1,40 @@
+lib-cov
+*.seed
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+*.log
+
+pids
+logs
+results
+tmp
+
+# Dependency directory
+node_modules
+bower_components
+
+# Editors
+.idea
+*.iml
+.vscode
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore build
+dist/
+
+# ignore yarn.lock
+yarn.lock
+package-lock.json
+
+# envairoment
+.env
+
+# # devops file
+# deploy
