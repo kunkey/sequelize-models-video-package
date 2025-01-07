@@ -1,6 +1,6 @@
 {
   "name": "sequelize-models-video-package",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "The package package contains the common structure for many services that use sequelize mysql",
   "main": "index.js",
   "author": "kunkeypr",

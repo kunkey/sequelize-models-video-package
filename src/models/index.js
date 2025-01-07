@@ -55,10 +55,6 @@ module.exports = function (Connection, Sequelize) {
         './cms/role/role_permission.model',
         // Thêm các models khác ở đây
     ]);
-    
-    AppDatabase.models.CmsUserModel.findAll({}).then((ok) => {
-        console.log('All users:', ok);
-    });
 
     AppDatabase.associations([
         './app/association',
